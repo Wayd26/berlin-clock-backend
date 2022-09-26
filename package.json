@@ -6,14 +6,15 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon --watch src src/index.js",
-    "build": "npm run build"
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "author": "Wassiou AYEDOUN",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
-    "joi": "^17.6.1"
+    "joi": "^17.6.1",
+    "netlify-lambda": "^2.0.15"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
